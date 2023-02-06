@@ -1,15 +1,5 @@
 # Code snippets for python users
 
-- Print time in '%Y-%m-%d'format
-```python3
-import time
-from time import strftime
-
-local_tm = time.localtime()
-format = strftime('%Y-%m-%d', local_tm)
-```
----
-
 -  Running IPython in the middle of running terminal script
 ```python3
 import IPython; IPython.embed(); exit(1)
@@ -22,12 +12,34 @@ import json
 # load json
 with open("./name.json", "r") as json_file:
     data = json.load(json_file)
-
 # save json
 with open("./name.json", "w") as json_file:
     json.dump(your_json, json_file)
 ```
 ---
+
+- Pickle load & save
+```python3
+import pickle
+# load pkl
+with open(./name.pkl", 'rb') as f:
+     data = pickle.load(f)
+# save pkl
+with open("./name.pkl", "wb") as f:
+    pickle.dump(your_pkl, f)
+```
+---
+
+- Print time in '%Y-%m-%d'format
+```python3
+import time
+from time import strftime
+
+local_tm = time.localtime()
+format = strftime('%Y-%m-%d', local_tm)
+```
+---
+
 
 - Set seed (including pytorch)
 ```python3
