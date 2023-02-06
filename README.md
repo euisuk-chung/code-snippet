@@ -36,7 +36,8 @@ import time
 from time import strftime
 
 local_tm = time.localtime()
-format = strftime('%Y-%m-%d', local_tm)
+save_format = strftime('%Y_%m_%d_%H_%M', local_tm)
+save_format
 ```
 ---
 
