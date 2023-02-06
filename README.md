@@ -1,4 +1,4 @@
-# Daily used Code Snippets for python users
+# Code snippets for python users
 
 - Print time in '%Y-%m-%d'format
 ```python3
