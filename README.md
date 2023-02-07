@@ -1,4 +1,11 @@
 # Code snippets for python users
+
+- [Code snippets for python users](#code-snippets-for-python-users)
+  * [Useful snipppets](#useful-snipppets)
+  * [Python print related snippets](#python-print-related-snippets)
+  * [Python settings related snippets](#python-settings-related-snippets)
+
+
 ## Useful snipppets
 -  Running IPython in the middle of running terminal script
 ```python3
