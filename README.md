@@ -5,7 +5,7 @@
 import IPython; IPython.embed(); exit(1)
 ```
 
-- JSON load & save
+- `JSON` load & save
 ```python3
 import json
 
@@ -16,7 +16,7 @@ with open("./name.json", "w") as json_file:
     json.dump(your_json, json_file) # save json
 ```
 
-- Pickle snippets load & save
+- `Pickle` snippets load & save
 ```python3
 import pickle
 with open(./name.pkl", 'rb') as f:
