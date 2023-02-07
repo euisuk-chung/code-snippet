@@ -1,48 +1,54 @@
 # Code snippets for python users
-
+## Useful snipppets
 -  Running IPython in the middle of running terminal script
 ```python3
 import IPython; IPython.embed(); exit(1)
 ```
----
 
 - JSON load & save
 ```python3
 import json
-# load json
-with open("./name.json", "r") as json_file:
-    data = json.load(json_file)
-# save json
-with open("./name.json", "w") as json_file:
-    json.dump(your_json, json_file)
-```
----
 
-- Pickle load & save
+with open("./name.json", "r") as json_file:
+    data = json.load(json_file) # load json
+
+with open("./name.json", "w") as json_file:
+    json.dump(your_json, json_file) # save json
+```
+
+- Pickle snippets load & save
 ```python3
 import pickle
-# load pkl
 with open(./name.pkl", 'rb') as f:
-     data = pickle.load(f)
-# save pkl
+     data = pickle.load(f) # load pkl
+     
 with open("./name.pkl", "wb") as f:
-    pickle.dump(your_pkl, f)
+    pickle.dump(your_pkl, f) # save pkl
 ```
+
 ---
 
-- Print time in '%Y-%m-%d'format
+## Python print related snippets
+- print `pd.DataFrame` pretty✨ in jupyter cell
+```python3
+from IPython.display import display, HTML
+display(HTML(df.to_html()))
+```
+
+- print time in `yyyy_mm_dd_hh_mm` format
 ```python3
 import time
 from time import strftime
 
 local_tm = time.localtime()
 save_format = strftime('%Y_%m_%d_%H_%M', local_tm)
-save_format
+print(save_format)
 ```
+
 ---
 
-
-- Set seed (including pytorch)
+## Python settings related snippets
+- `seed` settings
 ```python3
 import random
 import torch
@@ -57,9 +63,8 @@ def fix_seed(seed: int) -> None:
   np.random.seed(seed)
   random.seed(seed)
 ```
----
 
-- Conda related stuffs
+- `conda` settings
 ```bash
 conda env list # get list of all my environments
 conda create --name py38 python=3.8 # create conda environment
