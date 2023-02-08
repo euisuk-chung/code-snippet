@@ -11,11 +11,11 @@
 ```python3
 import IPython; IPython.embed(); exit(1)
 ```
-- jupyter server(lab) server initialize
+- `Jupyter server(lab)` server initialize snippet
 ```bash
 jupyter lab --ip "*" --allow-root --no-browser --ContentsManager.allow_hidden=True
 ```
-- `JSON` load & save
+- `JSON` load & save snippet
 ```python3
 import json
 with open("./name.json", "r") as json_file:
@@ -25,7 +25,7 @@ with open("./name.json", "w") as json_file:
     json.dump(your_json, json_file) # save json
 ```
 
-- `Pickle` snippets load & save
+- `Pickle` load & save snippet
 ```python3
 import pickle
 with open(./name.pkl", 'rb') as f:
