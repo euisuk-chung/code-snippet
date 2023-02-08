@@ -6,7 +6,7 @@
   * [Python settings related snippets](#python-settings-related-snippets)
 
 
-## Useful snipppets
+## Useful snippets
 -  Running IPython in the middle of running terminal script
 ```python3
 import IPython; IPython.embed(); exit(1)
