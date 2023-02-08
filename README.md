@@ -11,11 +11,13 @@
 ```python3
 import IPython; IPython.embed(); exit(1)
 ```
-
+- jupyter server(lab) server initialize
+```bash
+jupyter lab --ip "*" --allow-root --no-browser --ContentsManager.allow_hidden=True
+```
 - `JSON` load & save
 ```python3
 import json
-
 with open("./name.json", "r") as json_file:
     data = json.load(json_file) # load json
 
