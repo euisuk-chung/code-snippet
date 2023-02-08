@@ -1,7 +1,7 @@
 # Code snippets for python users
 
 - [Code snippets for python users](#code-snippets-for-python-users)
-  * [Useful snipppets](#useful-snipppets)
+  * [Useful snippets](#useful-snippets)
   * [Python print related snippets](#python-print-related-snippets)
   * [Python settings related snippets](#python-settings-related-snippets)
 
