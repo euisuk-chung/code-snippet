@@ -39,6 +39,11 @@ with open("./name.pkl", "wb") as f:
 ---
 
 ## Git snippets
+- git configure
+```bash
+git config --global user.name "Your Name"
+git config --global user.email you@example.com
+```
 -  git pull / add / commit / push
 ```bash
 git pull
