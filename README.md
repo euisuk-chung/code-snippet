@@ -2,19 +2,21 @@
 
 - [Code snippets for python users](#code-snippets-for-python-users)
   * [Useful snippets](#useful-snippets)
-  * [Python print related snippets](#python-print-related-snippets)
-  * [Python settings related snippets](#python-settings-related-snippets)
-
+  * [Git snippets](#git-snippets)
+  * [Print snippets](#print-snippets)
+  * [Setting snippets](#setting-snippets)
 
 ## Useful snippets
 -  Running IPython in the middle of running terminal script
 ```python3
 import IPython; IPython.embed(); exit(1)
 ```
+
 - `Jupyter server(lab)` server initialize snippet
 ```bash
 jupyter lab --ip "*" --allow-root --no-browser --ContentsManager.allow_hidden=True
 ```
+
 - `JSON` load & save snippet
 ```python3
 import json
@@ -34,10 +36,27 @@ with open(./name.pkl", 'rb') as f:
 with open("./name.pkl", "wb") as f:
     pickle.dump(your_pkl, f) # save pkl
 ```
-
 ---
 
-## Python print related snippets
+## Git snippets
+-  git pull / add / commit / push
+```bash
+git pull
+git add .
+git commit -m "message_to_commit"
+git push --all
+```
+-  remove existing remote repository
+```bash
+git remote remove origin
+```
+-  add new remote repository
+```bash
+git remote add origin https://github.com/{ID}/{REPO}
+```
+---
+
+## Print snippets
 - print `pd.DataFrame` pretty✨ in jupyter cell
 ```python3
 from IPython.display import display, HTML
@@ -56,7 +75,7 @@ print(save_format)
 
 ---
 
-## Python settings related snippets
+## Setting snippets
 - `seed` settings
 ```python3
 import random
