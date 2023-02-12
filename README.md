@@ -30,7 +30,7 @@ with open("./name.json", "w") as json_file:
 - `Pickle` load & save snippet
 ```python3
 import pickle
-with open(./name.pkl", 'rb') as f:
+with open("./name.pkl", 'rb') as f:
      data = pickle.load(f) # load pkl
      
 with open("./name.pkl", "wb") as f:
