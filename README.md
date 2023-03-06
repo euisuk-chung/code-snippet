@@ -65,12 +65,12 @@ git remote add origin https://github.com/{ID}/{REPO}
 ---
 
 ## Tmux snippets
-- open new tmux session
+- open new tmux session named `jupyter-server`
 ```bash
 tmux new -s jupyter-server
 ```
 
-- attach currently opened tmux session by its name
+- attach currently opened tmux session by its name, `jupyter-server`
 ```bash
 tmux attach -t jupyter-server
 ```
