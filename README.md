@@ -195,4 +195,8 @@ conda remove --name py38 --all # remove conda environment
 conda list --revisions # check versions of my conda environment
 conda install --revision 2 # conda rollback to revision state 2
 ```
+- `ipykernel` setting
+```bash
+python -m ipykernel install --user --name py38 --display-name "py38"
+```
 ---
