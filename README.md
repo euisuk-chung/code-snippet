@@ -4,7 +4,9 @@
   * [Useful snippets](#useful-snippets)
   * [Git snippets](#git-snippets)
   * [Print snippets](#print-snippets)
-  * [Setting snippets](#setting-snippets)
+  * [Conda snippets](#conda-snippets)
+  * [Seed snippets](#seed-snippets)
+  * [Jupyter snippets](#jupyter-snippets)
 
 ## Useful snippets
 -  Running IPython in the middle of running terminal script
