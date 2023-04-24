@@ -172,7 +172,7 @@ print(save_format)
 
 ---
 
-## Seeds snippets
+## Seed snippets
 - `seed` settings
 ```python3
 import random
