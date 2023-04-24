@@ -170,7 +170,7 @@ print(save_format)
 
 ---
 
-## Setting snippets
+## Seeds snippets
 - `seed` settings
 ```python3
 import random
@@ -186,7 +186,13 @@ def fix_seed(seed: int) -> None:
   np.random.seed(seed)
   random.seed(seed)
 ```
+- When 'conda activate' does not work 
+```bash
+source activate <name_of_enviroment>
+```
+---
 
+## Conda snippets
 - `conda` settings
 ```bash
 conda env list # get list of all my environments
@@ -195,6 +201,9 @@ conda remove --name py38 --all # remove conda environment
 conda list --revisions # check versions of my conda environment
 conda install --revision 2 # conda rollback to revision state 2
 ```
+---
+
+## Jupyter snippets
 - `ipykernel` setting
 ```bash
 python -m ipykernel install --user --name py38 --display-name "py38"
