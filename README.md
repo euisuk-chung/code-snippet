@@ -19,7 +19,7 @@ import IPython; IPython.embed(); exit(1)
 import os
 
 # Specify the directory path
-proj_dic = "/../../../nas001/projects/data/"
+proj_dic = "/nas001/projects/data/"
 
 # List all files in the specified directory
 files = os.listdir(proj_dic)
