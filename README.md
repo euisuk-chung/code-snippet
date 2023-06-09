@@ -14,6 +14,21 @@
 import IPython; IPython.embed(); exit(1)
 ```
 
+-  Running IPython in the middle of running terminal script
+```python3
+import os
+
+# Specify the directory path
+proj_dic = "/../../../nas001/projects/data/"
+
+# List all files in the specified directory
+files = os.listdir(proj_dic)
+
+# Print the list of files
+for file in files:
+    print(file)
+```
+
 - `Jupyter(lab) server` server initialize snippet
 ```bash
 jupyter lab --ip "*" --allow-root --no-browser --ContentsManager.allow_hidden=True
