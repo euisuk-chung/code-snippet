@@ -14,7 +14,7 @@
 import IPython; IPython.embed(); exit(1)
 ```
 
--  Running IPython in the middle of running terminal script
+-  Print list of files under specified directory path
 ```python3
 import os
 
