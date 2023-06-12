@@ -22,11 +22,15 @@ for file in files:
 - `JSON` load & save snippet
 ```python3
 import json
-with open("./name.json", "r") as json_file:
-    data = json.load(json_file) # load json
 
-with open("./name.json", "w") as json_file:
-    json.dump(your_json, json_file) # save json
+def read_json(file_name):
+    with open(f"./{file_name}.json", "r") as json_file:
+        data = json.load(json_file) # load json
+    return data
+
+def save_json(file_name, json_to_save):
+    with open(f"./{file_name}.json", "w") as json_file:
+        json.dump(json_to_save, json_file) # save json
 ```
 
 - `Pickle` load & save snippet
