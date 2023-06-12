@@ -1,6 +1,4 @@
-# Code snippets for python users
-
-# 📦Snippets
+# Code Snippets for python users
 
 - 📜[Function Snippets](snippets/func_snippets.md)
 - 📜[Conda Snippets](snippets/conda_snippets.md)
