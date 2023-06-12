@@ -1,6 +1,6 @@
 # Code Snippets for python users
 
-- 📜[Function Snippets](snippets/func_snippets.md)
+- 📜[Data Check Snippets](snippets/data_chk_snippets.md)
 - 📜[Conda Snippets](snippets/conda_snippets.md)
 - 📜[Git Snippets](snippets/git_snippets.md)
 - 📜[Jupyter Snippets](snippets/jupyter_snippets.md)
