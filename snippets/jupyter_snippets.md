@@ -19,3 +19,22 @@ jupyter kernelspec list
 ```bash
 jupyter kernelspec uninstall <kernel_name>
 ```
+
+- Jupyter number/row/column display snippets
+```python3
+import pandas as pd
+import numpy as np
+
+# Define the current settings as mentioned
+pd.options.display.float_format = '{:,.2f}'.format
+pd.options.display.max_rows = 3000
+
+# Set option to display maximum columns
+pd.options.display.max_columns = None
+
+# For numpy, we can set print options, but it applies globally, not just in Jupyter.
+np.set_printoptions(suppress=True, formatter={'float_kind':'{:,.2f}'.format})
+
+# Display current settings to confirm
+pd.get_option("display.max_rows"), pd.get_option("display.max_columns"), np.get_printoptions()
+```
