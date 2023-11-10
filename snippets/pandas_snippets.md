@@ -177,6 +177,12 @@
   styled_data = data.style.background_gradient(cmap='viridis')
   ```
 
+- 데이터프레임 스타일 지정하기
+  ```python3
+  # df는 데이터프레임 객체
+  df.style.background_gradient(cmap='coolwarm')
+  ```
+
 ## 출력 결과 저장
 
 - DataFrame을 HTML 파일로 저장
