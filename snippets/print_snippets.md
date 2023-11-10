@@ -14,3 +14,9 @@ local_tm = time.localtime()
 save_format = strftime('%Y_%m_%d_%H_%M', local_tm)
 print(save_format)
 ```
+
+- Jupyter Notebook에서의 Display:
+```python3
+from IPython.display import display
+display(f_cor)
+```
