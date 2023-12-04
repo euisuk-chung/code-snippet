@@ -5,6 +5,11 @@
 jupyter lab --ip "*" --allow-root --no-browser --ContentsManager.allow_hidden=True
 ```
 
+- Install `ipykernel` 
+```bash
+pip install ipykernel
+```
+
 - Set `ipykernel` 
 ```bash
 python -m ipykernel install --user --name py38 --display-name "py38"
