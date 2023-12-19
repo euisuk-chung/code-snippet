@@ -8,15 +8,21 @@ import IPython; IPython.embed(); exit(1)
 ```python3
 import os
 
-# Specify the directory path
-proj_dic = "/nas001/projects/data/"
+def check_under_folder(proj_loc):
+    # List all files in the specified directory
+    files = os.listdir(proj_loc)
+    
+    full_paths = []
+    
+    # Get the full path for each file
+    for file in files:
+        full_path = os.path.join(proj_loc, file)
+        full_paths.append(full_path)
+    
+    return full_paths
 
-# List all files in the specified directory
-files = os.listdir(proj_dic)
-
-# Print the list of files
-for file in files:
-    print(file)
+train = check_under_folder("/nas001/projects/TRAIN/")
+test = check_under_folder("/nas001/projects/TEST/")
 ```
 
 - `JSON` load & save snippet
