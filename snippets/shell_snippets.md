@@ -21,6 +21,6 @@
   ```bash
   #!/bin/bash
   
-  # mad 폴더와 그 안의 모든 파일 및 폴더에 작성 권한 추가
+  # titled 폴더와 그 안의 모든 파일 및 폴더에 작성 권한 추가
   chmod -R u+w titled/
   ```
