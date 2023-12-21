@@ -10,4 +10,5 @@
     
     # train_test_split 함수를 사용하여 데이터 분할
     X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
+    # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, shuffle=False)
   ```
