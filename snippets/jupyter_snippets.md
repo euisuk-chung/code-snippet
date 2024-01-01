@@ -64,3 +64,39 @@ X = df.iloc[:, :-1]
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 # X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.15, shuffle=False)
 ```
+
+- Basic train_test_split 수행 (shuffle 주의)
+```python3
+import numpy as np
+
+def custom_train_test_split(df, train_ratio=0.8, shuffle=False):
+    """
+    Custom function to split a DataFrame into train and test sets based on a specified ratio.
+    
+    :param df: Pandas DataFrame to be split
+    :param train_ratio: Ratio of the dataset to be used as the training set
+    :param shuffle: Boolean flag to shuffle the dataset before splitting
+    :return: X_train, X_test, y_train, y_test
+    """
+    if shuffle:
+        # Randomly shuffle the dataset
+        df = df.sample(frac=1).reset_index(drop=True)
+    
+    # Calculate the index for splitting
+    split_index = int(len(df) * train_ratio)
+    
+    # Split the DataFrame
+    train_df = df.iloc[:split_index]
+    test_df = df.iloc[split_index:]
+    
+    # Separate features and target
+    X_train = train_df.iloc[:, :-1]
+    y_train = train_df.iloc[:, -1]
+    X_test = test_df.iloc[:, :-1]
+    y_test = test_df.iloc[:, -1]
+    
+    return X_train, X_test, y_train, y_test
+    
+    # Example usage
+    # X_train, X_test, y_train, y_test = custom_train_test_split(df, train_ratio=0.8, shuffle=False)
+```
