@@ -18,6 +18,7 @@ This repository contains a collection of code snippets for Python users.
 - [Visualization Snippets](snippets/viz_snippets.md)
 
 ## Tree
+~~~
 code-snippet
 ├── snippets/
 │   ├── conda_snippets.md
@@ -33,3 +34,4 @@ code-snippet
 │   ├── tmux_snippets.md
 │   └── viz_snippets.md
 └── README.md
+~~~
