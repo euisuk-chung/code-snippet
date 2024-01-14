@@ -50,3 +50,22 @@ watch -n 초 수행할_명령어 # 예: watch -n 5 date -> 매 5초마다 date �
   ```bash
   chmod -R +x /path/to/folder
   ```
+
+- Mount NAS001
+  ```bash
+  # 연결 정보 확인
+  # df -h
+
+  # Debian/Ubuntu 기반 시스템
+  sudo apt-get install nfs-common
+
+  # 연결할 폴더 만들기
+  sudo mkdir -p /nas001
+
+  # Make connection
+  sudo mount 10.158.2.225:/volume2/nas001 /nas001
+
+  # 자동 마운트 설정 (선택 사항)
+  echo "10.158.2.225:/volume2/nas001 /nas001 nfs defaults 0 0" | sudo tee -a /etc/fstab
+  # 
+  ```
