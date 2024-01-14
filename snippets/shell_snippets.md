@@ -1,3 +1,11 @@
+- Remove multiple conda evs
+  ```bash
+  #!/bin/bash
+  for env in mad pad prophet prophet_env py38 pycaret pyod; do
+    conda env remove --name $env
+  done
+  ```
+
 - 지정한 위치의 폴더를 Data 폴더로 이동합니다.
   ```bash
   #!/bin/bash
