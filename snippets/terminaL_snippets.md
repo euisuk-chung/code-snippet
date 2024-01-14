@@ -64,8 +64,4 @@ watch -n 초 수행할_명령어 # 예: watch -n 5 date -> 매 5초마다 date �
 
   # Make connection
   sudo mount 10.158.2.225:/volume2/nas001 /nas001
-
-  # 자동 마운트 설정 (선택 사항)
-  echo "10.158.2.225:/volume2/nas001 /nas001 nfs defaults 0 0" | sudo tee -a /etc/fstab
-  # 
   ```
