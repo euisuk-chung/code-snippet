@@ -12,6 +12,8 @@ conda clean -a # clean conda cache
 
 - activate jupyre kernelspec
 ```bash
+# 해당 콘다 env 활성화 후
+pip install ipykernel
 python -m ipykernel install --user --name py39 
 ```
 
