@@ -22,7 +22,7 @@ python -m ipykernel install --user --name py39
 source activate <name_of_enviroment>
 ```
 
-- Installing packages in
+- Installing packages in `requirements.txt`
 ```bash
 pip install -r requirements.txt
 ```
