@@ -29,27 +29,63 @@
     ```python3
     import json
     
-    def read_json(file_name):
-        with open(f"./{file_name}.json", "r") as json_file:
-            data = json.load(json_file) # load json
+    def read_json(file_name, save_loc=None):
+        """
+        Read data from a JSON file.
+    
+        Args:
+            file_name (str): Name of the JSON file.
+            save_loc (str, optional): Location to save the JSON file. Defaults to None.
+    
+        Returns:
+            data: Data loaded from the JSON file.
+        """
+        with open(f"{save_loc}/{file_name}.json", "r") as json_file:
+            data = json.load(json_file)
         return data
     
-    def save_json(file_name, json_to_save):
-        with open(f"./{file_name}.json", "w") as json_file:
-            json.dump(json_to_save, json_file) # save json
+    def save_json(file_name, file, save_loc=None):
+        """
+        Save data to a JSON file.
+    
+        Args:
+            file_name (str): Name of the JSON file.
+            file: Data to be saved in the JSON file.
+            save_loc (str, optional): Location to save the JSON file. Defaults to None.
+        """
+        with open(f"{save_loc}/{file_name}.json", "w") as json_file:
+            json.dump(file, json_file)
     ```
 
 - `Pickle` load & save snippet
     ```python3
     import pickle
-    def read_pkl(file_name):
-        with open(f'{file_name}', 'rb') as f:
-             data = pickle.load(f)
+    def read_pkl(file_name, save_loc=None):
+        """
+        Read data from a pickle file.
+    
+        Args:
+            file_name (str): Name of the pickle file.
+            save_loc (str, optional): Location to save the pickle file. Defaults to None.
+    
+        Returns:
+            data: Data loaded from the pickle file.
+        """
+        with open(f"{save_loc}/{file_name}.pkl", "rb") as f:
+            data = pickle.load(f)
         return data
     
-    def write_pkl(file_name, file):
-        with open(f'{file_name}', 'wb') as f:
-             pickle.dump(file, f)
+    def write_pkl(file_name, file, save_loc=None):
+        """
+        Write data to a pickle file.
+    
+        Args:
+            file_name (str): Name of the pickle file.
+            file: Data to be saved in the pickle file.
+            save_loc (str, optional): Location to save the pickle file. Defaults to None.
+        """
+        with open(f"{save_loc}/{file_name}.pkl", "wb") as f:
+            pickle.dump(file, f)
     ```
 
 - Jupyter number/row/column display snippets
