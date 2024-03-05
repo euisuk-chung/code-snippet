@@ -10,7 +10,7 @@ conda install --revision 0 # convert conda to initial state
 conda clean -a # clean conda cache
 ```
 
-- activate jupyre kernelspec
+- activate jupyter kernelspec
 ```bash
 # 해당 콘다 env 활성화 후
 pip install ipykernel
