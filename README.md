@@ -4,7 +4,8 @@ This repository contains a collection of code snippets for Python users.
 
 ## Snippets
 
-- [Data Check Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/data_chk_snippets.md)
+- [PyENV Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/pyenv_snippets.md)
+- [pipENV Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/pipenv_snippets.md)
 - [Conda Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/conda_snippets.md)
 - [Git Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/git_snippets.md)
 - [Jupyter Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/jupyter_snippets.md)
@@ -14,6 +15,7 @@ This repository contains a collection of code snippets for Python users.
 - [Seed Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/seed_snippets.md)
 - [Terminal Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/terminaL_snippets.md)
 - [Tmux Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/tmux_snippets.md)
+- [Profiling Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/profiling_snippets.md)
 
 ## Shell Scripts
 - [Shell Scripts](https://github.com/euisuk-chung/code-snippet/blob/main/scripts/)
@@ -22,8 +24,10 @@ This repository contains a collection of code snippets for Python users.
 ~~~
 code-snippet
 ├── Snippets/
+│   ├── pyenv_snippets.md
+│   ├── pipenv_snippets.md
 │   ├── conda_snippets.md
-│   ├── data_chk_snippets.md
+│   ├── profiling_snippets.md
 │   ├── git_snippets.md
 │   ├── jupyter_snippets.md
 │   ├── linux_snippets.md
