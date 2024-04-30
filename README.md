@@ -12,10 +12,11 @@ This repository contains a collection of code snippets for Python users.
 - [Pandas Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/pandas_snippets.md)
 - [Python Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/python_snippets.md)
 - [Seed Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/seed_snippets.md)
-- [Shell Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/shell_snippets.md)
 - [Terminal Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/terminaL_snippets.md)
 - [Tmux Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/tmux_snippets.md)
-- [Visualization Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/viz_snippets.md)
+
+## Shell Scripts
+- [Shell Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/shell_snippets.md)
 
 ## Tree
 ~~~
@@ -29,9 +30,7 @@ code-snippet
 │   ├── pandas_snippets.md
 │   ├── python_snippets.md
 │   ├── seed_snippets.md
-│   ├── shell_snippets.md
 │   ├── terminal_snippets.md
 │   ├── tmux_snippets.md
-│   └── viz_snippets.md
 └── README.md
 ~~~
