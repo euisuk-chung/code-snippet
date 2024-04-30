@@ -21,7 +21,7 @@ This repository contains a collection of code snippets for Python users.
 ## Tree
 ~~~
 code-snippet
-├── snippets/
+├── Snippets/
 │   ├── conda_snippets.md
 │   ├── data_chk_snippets.md
 │   ├── git_snippets.md
@@ -32,5 +32,6 @@ code-snippet
 │   ├── seed_snippets.md
 │   ├── terminal_snippets.md
 │   ├── tmux_snippets.md
+├── Scripts/
 └── README.md
 ~~~
