@@ -16,7 +16,7 @@ This repository contains a collection of code snippets for Python users.
 - [Tmux Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/tmux_snippets.md)
 
 ## Shell Scripts
-- [Shell Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/shell_snippets.md)
+- [Shell Scripts](https://github.com/euisuk-chung/code-snippet/blob/main/scripts/)
 
 ## Tree
 ~~~
