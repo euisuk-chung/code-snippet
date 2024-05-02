@@ -185,3 +185,16 @@
     from IPython.display import display
     display(f_cor)
     ```
+
+- Merge Dataframes
+  ```python3
+    # 데이터프레임 병합 함수 정의
+    def merge_dataframes(file_list):
+        merged_df = pd.read_csv(file_list[0])
+        for file in file_list[1:]:
+            # print(file)
+            df = pd.read_csv(file)
+            merged_df = pd.merge(merged_df, df, on='WeekStart', how='inner')
+            # display(merged_df.columns)
+        return merged_df
+  ```
