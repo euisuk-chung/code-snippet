@@ -189,12 +189,18 @@
 - Merge Dataframes
   ```python3
     # 데이터프레임 병합 함수 정의
-    def merge_dataframes(file_list):
+    def merge_dataframes(file_list, merge_col_name, join_type='inner'):
+        """
+        Custom function merge DataFrames into one DataFrame using merge_col_name.
+        :param file_list: List of files(DataFrame)
+        :param merge_col_name: File Join Key
+        :param join_type: join_type ('inner', 'outer', 'left', 'right')
+        :return: merged_df
+        """
         merged_df = pd.read_csv(file_list[0])
         for file in file_list[1:]:
-            # print(file)
             df = pd.read_csv(file)
-            merged_df = pd.merge(merged_df, df, on='WeekStart', how='inner')
+            merged_df = pd.merge(merged_df, df, on=merge_col_name, how=join_type)
             # display(merged_df.columns)
         return merged_df
   ```
