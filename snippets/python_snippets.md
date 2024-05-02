@@ -21,8 +21,8 @@
         
         return full_paths
     
-    train = check_under_folder("/nas001/projects/TRAIN/")
-    test = check_under_folder("/nas001/projects/TEST/")
+    train = check_under_folder("/Data/TRAIN/")
+    test = check_under_folder("/Data/TEST/")
     ```
 
 - `JSON` load & save snippet
