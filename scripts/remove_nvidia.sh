@@ -1,4 +1,5 @@
-# Shell script
+#!/bin/bash
+
 sudo apt-get update -y && sudo apt-get upgrade -y
 sudo apt-get purge -y nvidia*
 sudo apt-get autoremove
