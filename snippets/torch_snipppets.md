@@ -31,9 +31,12 @@ torch.cuda.is_available()
 # cuda가 사용 가능하면 device에 "cuda"를 저장하고 사용 가능하지 않으면 "cpu"를 저장한다.
 device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
+# 내 장치의 디바이스 이름 가져오기
+torch.cuda.get_device_name(0) # NVIDIA GeForce GTX 1080
+
 # 멀티 GPU 사용 시 사용 가능한 GPU 셋팅 관련
-# 아래 코드의 "0,1,2"는 GPU가 3개 있고 그 번호가 0, 1, 2 인 상황의 예제입니다.
-# 만약 GPU가 5개이고 사용 가능한 것이 0, 3, 4 라면 "0,3,4" 라고 적으면 됩니다.
+## 아래 코드의 "0,1,2"는 GPU가 3개 있고 그 번호가 0, 1, 2 인 상황의 예제입니다.
+## 만약 GPU가 5개이고 사용 가능한 것이 0, 3, 4 라면 "0,3,4" 라고 적으면 됩니다.
 os.environ["CUDA_VISIBLE_DEVICES"] = "0,1,2"
 
 # 현재 PC의 사용가능한 GPU 사용 갯수 확인
