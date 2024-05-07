@@ -13,7 +13,7 @@ sudo rm -rf /usr/local/cuda*
 # 3. install other import packages
 sudo apt install g++ freeglut3-dev build-essential libx11-dev libxmu-dev libxi-dev libglu1-mesa libglu1-mesa-dev
 sudo add-apt-repository ppa:graphics-drivers/ppa
-sudo apt update && sudo apt upgrade -y
+sudo apt update -y && sudo apt upgrade -y
 
 # 4. find recommended driver versions for you
 ubuntu-drivers devices
