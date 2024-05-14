@@ -123,13 +123,13 @@ export PATH="/usr/bin:$PATH"
 
 1. 새로운 사용자 계정 생성:
    ```bash
-   adduser newuser
+   adduser {user_name}
    ```
 2. 비밀번호 설정:
    ```bash
-   passwd newuser
+   passwd {user_name}
    ```
 3. 사용자에게 sudo 권한 부여:
    ```bash
-   usermod -aG sudo newuser
+   usermod -aG sudo {user_name}
    ```
