@@ -79,3 +79,57 @@ export PATH="/usr/bin:$PATH"
 
 - 기본 사용법: `scp [옵션] <원본> <목적지>`
 - 예시: `scp local_file.txt user@192.168.1.1:/remote/directory/` (local_file.txt를 원격 호스트 192.168.1.1의 /remote/directory/ 디렉토리로 복사)
+
+리눅스에서 사용자 계정을 추가하거나 삭제하는 명령어와 방법을 소개하겠습니다.
+
+## adduser
+`adduser` 명령어는 새로운 사용자 계정을 생성할 때 사용합니다. 이 명령어는 사용자 계정을 추가하고 필요한 디렉토리와 기본 설정을 자동으로 구성합니다.
+
+- 기본 사용법: `adduser <사용자명>`
+- 예시: `adduser newuser` (newuser라는 이름의 새로운 사용자 계정을 생성)
+
+## useradd
+`useradd` 명령어는 `adduser`와 비슷하지만, 더 많은 옵션을 제공합니다. 이 명령어를 사용할 때는 홈 디렉토리 생성과 같은 추가 작업이 필요할 수 있습니다.
+
+- 기본 사용법: `useradd [옵션] <사용자명>`
+- 예시: `useradd -m -s /bin/bash newuser` (newuser라는 이름의 새로운 사용자 계정을 생성하고, 홈 디렉토리를 생성하며, 기본 쉘을 /bin/bash로 설정)
+
+## deluser
+`deluser` 명령어는 기존 사용자 계정을 삭제할 때 사용합니다.
+
+- 기본 사용법: `deluser <사용자명>`
+- 예시: `deluser olduser` (olduser라는 이름의 사용자 계정을 삭제)
+
+## userdel
+`userdel` 명령어는 `deluser`와 비슷하지만, 더 많은 옵션을 제공합니다.
+
+- 기본 사용법: `userdel [옵션] <사용자명>`
+- 예시: `userdel -r olduser` (olduser라는 이름의 사용자 계정을 삭제하고, 홈 디렉토리와 메일 스풀을 함께 삭제)
+
+## passwd
+`passwd` 명령어는 사용자 계정의 비밀번호를 설정하거나 변경할 때 사용합니다.
+
+- 기본 사용법: `passwd <사용자명>`
+- 예시: `passwd newuser` (newuser의 비밀번호를 설정하거나 변경)
+
+## usermod
+`usermod` 명령어는 기존 사용자 계정의 속성을 수정할 때 사용합니다.
+
+- 기본 사용법: `usermod [옵션] <사용자명>`
+- 예시: `usermod -aG sudo newuser` (newuser를 sudo 그룹에 추가)
+
+### 예제 코드
+다음은 새로운 사용자를 추가하고, 비밀번호를 설정하고, sudo 권한을 부여하는 예제 시나리오입니다.
+
+1. 새로운 사용자 계정 생성:
+   ```bash
+   adduser newuser
+   ```
+2. 비밀번호 설정:
+   ```bash
+   passwd newuser
+   ```
+3. 사용자에게 sudo 권한 부여:
+   ```bash
+   usermod -aG sudo newuser
+   ```
