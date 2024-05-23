@@ -13,12 +13,12 @@ fi
 conda config --set auto_activate_base false
 
 # 필요한 의존성 설치 (Ubuntu/Debian 기준)
-sudo apt-get update
+sudo apt-get update -y && sudo apt-get upgrade -y
 
 sudo apt-get install -y make build-essential libssl-dev zlib1g-dev \
-libbz2-dev libreadline-dev libsqlite3-dev wget curl llvm \
-libncurses5-dev libncursesw5-dev xz-utils tk-dev libffi-dev liblzma-dev \
-python3-openssl git
+libbz2-dev libreadline-dev libsqlite3-dev wget curl git llvm python3-openssl \
+libncurses5-dev libncursesw5-dev xz-utils tk-dev libxml2-dev libxmlsec1-dev \
+libffi-dev liblzma-dev
  
 # pyenv 설치
 if [ ! -d "${HOME}/.pyenv" ]; then
