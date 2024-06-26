@@ -11,7 +11,7 @@
     ```
 
 - Set `ipykernel`
-    - `Update` : works the same in pipenv environment
+    - `Update` : works the same in pipenv environment (just run the code in pipenv shell)
     ```bash
     python -m ipykernel install --user --name py38 --display-name "py38"
     ```
