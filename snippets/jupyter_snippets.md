@@ -10,7 +10,8 @@
     pip install ipykernel
     ```
 
-- Set `ipykernel` 
+- Set `ipykernel`
+    - `Update` : works the same in pipenv environment
     ```bash
     python -m ipykernel install --user --name py38 --display-name "py38"
     ```
