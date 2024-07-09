@@ -116,7 +116,10 @@
 ---
 
 ## 출력 옵션 관리
-
+- 판다스 수학적 표기법으로 변경 (과학표기 e-01 등 싫어..)
+  ```python
+  pd.set_option('display.float_format', lambda x: '%.3f' % x)
+  ```
 - 최대 출력 열 수 설정
   ```python
   pd.set_option('display.max_columns', 10)
