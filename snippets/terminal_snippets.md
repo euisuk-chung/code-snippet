@@ -1,4 +1,13 @@
 # Terminal snippets
+- `CUDA version` 확인하는 방법
+```bash
+nvcc --version
+```
+
+- `CUDA` 모니터링 확인하는 방법
+```bash
+nvidia-smi
+```
 
 - `top` 명령어로 CPU나 메모리 사용량 확인하기
 ```bash
