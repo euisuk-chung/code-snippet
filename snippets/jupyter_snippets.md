@@ -1,4 +1,20 @@
 # Jupyter snippets
+- `Jupyter` Korean Font install in Ubuntu Server
+  ```bash
+    # 한글 폰트가 없을 때
+    ! sudo apt-get install fonts-nanum*
+    
+    import matplotlib
+    import subprocess
+    
+    mpl_file = matplotlib.__file__
+    mpl_file_loc = '/'.join(mpl_file.split('/')[:-1]) + '/mpl-data/fonts/ttf/'
+    print(matplotlib.__file__)
+    print(mpl_file_loc)
+    
+    # 폰트 복사
+    subprocess.run(['cp', '/usr/share/fonts/truetype/nanum/Nanum*', mpl_file_loc], shell=True)
+  ```
 
 - `Jupyter(lab) server` server initialize snippet
     ```bash
