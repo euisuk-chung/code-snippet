@@ -24,6 +24,11 @@
   ```
 
 ## 기본 데이터 조작
+- Jupyter Notebook에서의 display()
+  ```python
+  from IPython.display import display
+  display(f_cor)
+  ```
 
 - 데이터프레임의 첫 n개 행 보기
   ```python
