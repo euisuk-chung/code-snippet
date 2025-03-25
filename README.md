@@ -3,6 +3,7 @@
 This repository contains a collection of code snippets for Python users.
 
 ## Snippets
+- [PIP Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/pip_snippets.md)
 - [pyTorch Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/torch_snippets.md)
 - [pyENV Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/pyenv_snippets.md)
 - [pipENV Snippets](https://github.com/euisuk-chung/code-snippet/blob/main/snippets/pipenv_snippets.md)
