@@ -1,4 +1,8 @@
 # Tmux snippets
+- for installation
+```bash
+sudo apt-get install tmux
+```
 
 - open new tmux session named `jupyter-server`
 ```bash
@@ -30,3 +34,10 @@ ctrl + b , d # 퇴장
 # OR
 exit # tmux 창 삭제
 ```
+
+- etc (tmux 명령어 바꾸기)
+   - 해당 링크 참고: https://gist.github.com/spicycode/1229612
+```bash
+~/.tmux.conf
+```
+- 
