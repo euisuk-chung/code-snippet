@@ -148,6 +148,52 @@ git fetch --all --prune
 
 ```
 
+### E. 최신 develop/main을 내 작업 브랜치에 반영하기 (Merge vs Rebase)
+
+작업 중인데 다른 사람이 `develop`(또는 `main`)에 커밋을 많이 추가한 경우, 내 브랜치에도 최신 내용을 반영해야 합니다. 두 가지 방법이 있습니다:
+
+#### 1) Merge (안전, 히스토리에 merge commit 남음)
+
+```bash
+git fetch origin
+git switch develop && git pull --ff-only   # 기준 브랜치 최신화
+git switch feature/langfuse-image-handling
+git merge --no-ff origin/develop
+git push
+```
+
+* 장점: 원격 브랜치와 히스토리를 재작성하지 않음 → 협업 안정성
+* 단점: Merge commit이 생겨 히스토리가 분기 형태
+
+#### 2) Rebase (히스토리 깔끔, 주의 필요)
+
+```bash
+git fetch origin
+git switch develop && git pull --ff-only
+git switch feature/langfuse-image-handling
+git rebase origin/develop
+# 충돌 시 수정 → add → rebase --continue
+git push --force-with-lease
+```
+
+* 장점: 히스토리가 한 줄로 깔끔
+* 단점: 이미 원격에 푸시한 브랜치라면 `--force-with-lease` 필요
+
+#### 3) 작업 중간이라 로컬 변경이 남아있을 때
+
+```bash
+git pull --rebase --autostash origin develop
+```
+
+* 내 변경을 자동으로 스태시/복구해 안전하게 rebase 진행
+
+---
+
+> 💡 **간단 기준**
+> * 팀이 **선형 히스토리(깔끔)**를 원하면 → Rebase
+> * 협업 중이고 **히스토리 안정성**이 우선이면 → Merge
+
+
 ---
 
 ## 5) PR/MR 생성 (GitLab 예시)
