@@ -140,7 +140,7 @@ git push --force-with-lease
 
 ```
 
-### D. “원격 브랜치 목록이 이상하게 오래됨”
+### D.내 로컬에 캐싱된 원격 브랜치 목록(remote-tracking branch)이 오래되었을떄
 
 ```bash
 git remote -v         # 원격 설정 확인
@@ -150,7 +150,9 @@ git fetch --all --prune
 
 ### E. 최신 develop/main을 내 작업 브랜치에 반영하기 (Merge vs Rebase)
 
-작업 중인데 다른 사람이 `develop`(또는 `main`)에 커밋을 많이 추가한 경우, 내 브랜치에도 최신 내용을 반영해야 합니다. 두 가지 방법이 있습니다:
+작업 중인데 다른 사람이 `develop`(또는 `main`)에 커밋을 많이 추가한 경우, 내 브랜치에도 최신 내용을 반영해야 합니다. 
+
+두 가지 방법이 있습니다:
 
 #### 1) Merge (안전, 히스토리에 merge commit 남음)
 
