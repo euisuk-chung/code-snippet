@@ -9,6 +9,10 @@ git branch -a           # 로컬+원격 전체 브랜치 목록
 
 ```
 
+* `status`: 워킹 디렉터리와 스테이징 영역 확인
+* `branch -vv`: 현재 브랜치가 어떤 원격 브랜치를 추적 중인지 확인
+* `branch -a`: 로컬 브랜치 + 원격 추적 브랜치(`remotes/origin/...`) 전체 보기
+
 ---
 
 ## 1) 새 브랜치 생성 → 커밋 → 원격 푸시 (업스트림 설정 포함)
@@ -38,6 +42,8 @@ git pull    # 동일 브랜치로 자동 풀
 
 ```
 
+* `pull --ff-only`: 불필요한 merge commit 없이 단순히 브랜치 포인터만 최신으로 이동
+* 실패한다면 로컬에도 커밋이 있어서 fast-forward 불가 → merge/rebase 필요
 - `u/--set-upstream`: 로컬 브랜치 ↔ 원격 브랜치 **추적 관계** 설정.
 한 번 설정하면 이후 `git push/pull`만으로 대상이 자동 인식됩니다.
 
@@ -49,8 +55,10 @@ git pull    # 동일 브랜치로 자동 풀
 
 ```bash
 git fetch --all --prune
-
 ```
+
+* `fetch --all`: 모든 원격 저장소의 최신 커밋/브랜치 정보 가져오기
+* `--prune`: 원격에서 이미 삭제된 브랜치의 캐시(`remotes/origin/...`) 흔적을 로컬에서 제거
 
 이후 전환:
 
@@ -81,6 +89,9 @@ git branch -D feature/tmp-try
 
 ```
 
+* 로컬 브랜치 삭제 시 `-d`는 안전 모드, `-D`는 강제 삭제
+
+
 ### 원격 브랜치 삭제
 
 ```bash
@@ -90,6 +101,11 @@ git push origin --delete feature/old-experiment
 git push origin :feature/old-experiment
 
 ```
+
+
+* 원격 저장소에서 브랜치 직접 제거
+* 이후 `git fetch --prune`으로 로컬 캐시도 정리 필요
+
 
 ### 원격에 사라진 브랜치 흔적(로컬 캐시) 정리
 
@@ -145,8 +161,11 @@ git push --force-with-lease
 ```bash
 git remote -v         # 원격 설정 확인
 git fetch --all --prune
-
 ```
+
+* `remote -v`: origin이 어떤 주소(git@… 또는 https\://…)를 가리키는지 확인
+* `fetch --all --prune`: 원격 추적 브랜치(remote-tracking branch)를 최신화하고, 사라진 브랜치 흔적은 제거
+
 
 ### E. 최신 develop/main을 내 작업 브랜치에 반영하기 (Merge vs Rebase)
 
@@ -164,8 +183,14 @@ git merge --no-ff origin/develop
 git push
 ```
 
-* 장점: 원격 브랜치와 히스토리를 재작성하지 않음 → 협업 안정성
-* 단점: Merge commit이 생겨 히스토리가 분기 형태
+* `fetch origin`: 원격 최신 커밋 가져오기
+* `switch develop && pull --ff-only`: develop을 fast-forward 방식으로 최신화
+* `merge --no-ff origin/develop`: 내 작업 브랜치에 최신 develop을 병합, merge commit 생성
+* `push`: 결과를 원격에 반영
+
+* 장단점
+  * 장점: 원격 브랜치와 히스토리를 재작성하지 않음 → 협업 안정성
+  * 단점: Merge commit이 생겨 히스토리가 분기 형태
 
 #### 2) Rebase (히스토리 깔끔, 주의 필요)
 
@@ -178,8 +203,13 @@ git rebase origin/develop
 git push --force-with-lease
 ```
 
-* 장점: 히스토리가 한 줄로 깔끔
-* 단점: 이미 원격에 푸시한 브랜치라면 `--force-with-lease` 필요
+* `rebase origin/develop`: 내 작업 커밋들을 최신 develop 위로 재배치 → 히스토리 깔끔
+* 충돌 시 수정 후 `git rebase --continue`
+* 이미 푸시된 브랜치라면 `--force-with-lease`로 안전 강제 푸시 필요
+
+* 장단점
+  * 장점: 히스토리가 한 줄로 깔끔
+  * 단점: 이미 원격에 푸시한 브랜치라면 `--force-with-lease` 필요
 
 #### 3) 작업 중간이라 로컬 변경이 남아있을 때
 
@@ -187,6 +217,7 @@ git push --force-with-lease
 git pull --rebase --autostash origin develop
 ```
 
+* `--autostash`: 로컬 변경을 임시로 보관/복구하면서 rebase 진행
 * 내 변경을 자동으로 스태시/복구해 안전하게 rebase 진행
 
 ---
